@@ -146,7 +146,7 @@ class Urway extends Guzzle
     }
 
     /**
-     * @return Response
+     * @return UrwayResponse
      * @throws Exception
      */
     public function pay()
@@ -166,7 +166,7 @@ class Urway extends Guzzle
                 ]
             );
 
-            return new Response((string)$response->getBody());
+            return new UrwayResponse((string)$response->getBody());
         } catch (\Throwable $e) {
             throw new Exception($e->getMessage());
         }
@@ -196,7 +196,7 @@ class Urway extends Guzzle
                 ]
             );
 
-            return new Response((string)$response->getBody());
+            return new UrwayResponse((string)$response->getBody());
         } catch (\Throwable $e) {
             throw new Exception($e->getMessage());
         }
