@@ -57,4 +57,13 @@ class UrwayResponse
     {
         return $this->data[$name];
     }
+
+    /**
+     * @return array
+     */
+    public function body()
+    {
+        return $this->data;
+    }
+
 }

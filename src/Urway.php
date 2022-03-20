@@ -47,7 +47,7 @@ class Urway extends Guzzle
     /**
      * @return $this
      */
-    public function setCustomerIp($ip)
+    public function setMerchantIp($ip)
     {
         $this->attributes['merchantIp'] = $ip;
         return $this;
