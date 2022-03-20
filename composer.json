@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Wameed\\UrwayPaymentGateway\\Providers\\UrwayServiceProvider"
+        "Wameed\\UrwayPaymentGateway\\UrwayServiceProvider"
       ],
       "aliases": {
         "UrwayPaymentGateway": "Wameed\\UrwayPaymentGateway\\Facade\\UrwayPaymentGateway"
