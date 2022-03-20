@@ -5,8 +5,7 @@
   "require": {
     "php": ">=7.4",
     "illuminate/support": ">=7.4",
-    "guzzlehttp/guzzle": ">=6.0",
-    "ext-http": "*"
+    "guzzlehttp/guzzle": ">=6.0"
   },
   "license": "MIT",
   "autoload": {
@@ -30,5 +29,6 @@
       }
     }
   },
+
   "minimum-stability": "dev"
 }
