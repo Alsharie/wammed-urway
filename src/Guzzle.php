@@ -18,7 +18,7 @@ class Guzzle
      *
      * @var string
      */
-    protected $basePath = 'https://payments-dev.urway-tech.com';
+    protected $basePath ;
 
     /**
      * Store URWAY payment endpoint.
@@ -33,6 +33,8 @@ class Guzzle
     public function __construct()
     {
         $this->guzzleClient = new Client();
+        $this->basePath = config('urway.url.base');
+        $this->endpoint = config('urway.url.payment');
     }
 
     /**
