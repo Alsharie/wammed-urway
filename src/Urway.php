@@ -10,7 +10,7 @@ class Urway extends Guzzle
     /**
      * @var string
      */
-    protected $endpoint = 'URWAYPGService/transaction/jsonProcess/JSONrequest';
+    protected $endpoint ;
 
     /**
      * Request method.
@@ -86,6 +86,16 @@ class Urway extends Guzzle
     public function setRedirectUrl($url)
     {
         $this->attributes['udf2'] = $url;
+        return $this;
+    }
+
+    /**
+     * the language of the payment page
+     * @return $this
+     */
+    public function setPaymentPageLanguage($locale)
+    {
+        $this->attributes['udf3'] = $locale;
         return $this;
     }
 
@@ -177,7 +187,7 @@ class Urway extends Guzzle
      * @return mixed
      * @throws \GuzzleHttp\Exception\GuzzleException|Exception
      */
-    public function find(string $transaction_id)
+    public function verify(string $transaction_id)
     {
         // set `terminal_id`, and `password` now.
         $this->setAuthAttributes();
