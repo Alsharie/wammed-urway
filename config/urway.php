@@ -8,7 +8,7 @@ return [
     ],
     'url'=>[
         //change 'payments-dev.urway-tech' to 'payments.urway-tech' when you are ready to go live
-        'base'=>env('URWAY_BASE_URL','https://payments-dev.urway-tech.com/'),
+        'base'=>env('URWAY_BASE_URL','https://payments-dev.urway-tech.com'),
         'payment'=>env('URWAY_PAYMENT_URL','URWAYPGService/transaction/jsonProcess/JSONrequest'),
     ]
 ];
