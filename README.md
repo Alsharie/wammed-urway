@@ -4,6 +4,7 @@ laravel package for urway payment getway
 
 
 You can publish using the following command
+
  `php artisan vendor:publish --provider="Wameed\UrwayPaymentGateway\UrwayServiceProvider"`
 
 When published, the `config/urway.php` config file contains:
