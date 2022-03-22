@@ -10,7 +10,7 @@ class Urway extends Guzzle
     /**
      * @var string
      */
-    protected $endpoint ;
+    protected $endpoint;
 
     /**
      * Request method.
@@ -167,6 +167,9 @@ class Urway extends Guzzle
         // generate request
         $this->generateRequestHash();
 
+        // set setMerchantIp if not set
+        $this->_setMerchantIp();
+
         try {
             $response = $this->guzzleClient->request(
                 $this->method,
@@ -194,6 +197,9 @@ class Urway extends Guzzle
 
         // As requestHas for paying request is different from requestHash for find request.
         $this->generateFindRequestHash();
+
+        // set setMerchantIp if not set
+        $this->_setMerchantIp();
 
         $this->attributes['transid'] = $transaction_id;
 
@@ -254,5 +260,46 @@ class Urway extends Guzzle
 
         $requestHash = $this->attributes['trackid'] . '|' . config('urway.auth.terminal_id') . '|' . config('urway.auth.password') . '|' . config('urway.auth.merchant_key') . '|' . $this->attributes['amount'] . '|' . $this->attributes['currency'];
         $this->attributes['requestHash'] = hash('sha256', $requestHash);
+    }
+
+    /**
+     * return the server ip address
+     * @return mixed|string
+     * @throws Exception
+     */
+    protected function _getServerIP()
+    {
+        $ip_address = '';
+        if (isset($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+        } else if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else if (isset($_SERVER['HTTP_X_FORWARDED'])) {
+            $ip_address = $_SERVER['HTTP_X_FORWARDED'];
+        } else if (isset($_SERVER['HTTP_FORWARDED_FOR'])) {
+            $ip_address = $_SERVER['HTTP_FORWARDED_FOR'];
+        } else if (isset($_SERVER['HTTP_FORWARDED'])) {
+            $ip_address = $_SERVER['HTTP_FORWARDED'];
+        } else if (isset($_SERVER['REMOTE_ADDR'])) {
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+        } else if (isset($_SERVER['SERVER_ADDR'])) {
+            $ip_address = $_SERVER['SERVER_ADDR'];
+        } else {
+            throw new Exception('Unable to get server ip address');
+        }
+
+        return $ip_address;
+    }
+
+
+    /**
+     * set setMerchantIp attribute if not set
+     * @return void
+     */
+    protected function _setMerchantIp()
+    {
+        if (!$this->hasAttribute('merchantIp')) {
+            $this->attributes['merchantIp'] = $this->_getServerIP();
+        }
     }
 }
