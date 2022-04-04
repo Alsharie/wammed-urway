@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '505f28301f22efde20c0654116ae3964ea429975',
         'name' => 'wameed/urway-payment-gateway',
         'dev' => true,
     ),
@@ -27,7 +27,7 @@
             'aliases' => array(
                 0 => '7.4.x-dev',
             ),
-            'reference' => 'be834dba54222c136af31bba9d9a9b05366671f4',
+            'reference' => '82ca75f0b1f130f018febdda29af13086da5dbac',
             'dev_requirement' => false,
         ),
         'guzzlehttp/promises' => array(
@@ -49,7 +49,7 @@
             'aliases' => array(
                 0 => '2.2.x-dev',
             ),
-            'reference' => 'b71e948cfd842d5938c3af7a782ae2820ae09c3c',
+            'reference' => 'c94a94f120803a18554c1805ef2e539f8285f9a2',
             'dev_requirement' => false,
         ),
         'illuminate/collections' => array(
@@ -238,12 +238,12 @@
             'dev_requirement' => false,
         ),
         'wameed/urway-payment-gateway' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '505f28301f22efde20c0654116ae3964ea429975',
             'dev_requirement' => false,
         ),
     ),

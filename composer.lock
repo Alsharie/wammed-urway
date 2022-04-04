@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa0fdbaeb858d9bc0c882479ba8d7608",
+    "content-hash": "a758c6e3cdae7df5494501ce1db331b8",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -103,12 +103,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "be834dba54222c136af31bba9d9a9b05366671f4"
+                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/be834dba54222c136af31bba9d9a9b05366671f4",
-                "reference": "be834dba54222c136af31bba9d9a9b05366671f4",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/82ca75f0b1f130f018febdda29af13086da5dbac",
+                "reference": "82ca75f0b1f130f018febdda29af13086da5dbac",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-13T16:20:27+00:00"
+            "time": "2022-03-20T14:21:21+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -313,12 +313,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "b71e948cfd842d5938c3af7a782ae2820ae09c3c"
+                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/b71e948cfd842d5938c3af7a782ae2820ae09c3c",
-                "reference": "b71e948cfd842d5938c3af7a782ae2820ae09c3c",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/c94a94f120803a18554c1805ef2e539f8285f9a2",
+                "reference": "c94a94f120803a18554c1805ef2e539f8285f9a2",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +405,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/master"
+                "source": "https://github.com/guzzle/psr7/tree/2.2.1"
             },
             "funding": [
                 {
@@ -421,7 +421,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-13T15:40:56+00:00"
+            "time": "2022-03-20T21:55:58+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -1534,7 +1534,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.6"
+        "php": ">=7.4"
     },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
