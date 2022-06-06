@@ -3,7 +3,7 @@ laravel package for urway payment getway
 
 
 install the package 
-`composer install wameed/urway-payment-gateway`
+`composer require wameed/urway-payment-gateway`
 
 
 You can publish using the following command
